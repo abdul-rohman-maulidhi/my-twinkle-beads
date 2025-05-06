@@ -242,7 +242,7 @@ const contactInfos = [
   {
     icon: <Mail />,
     label: "Email",
-    value: "twinklebeads@gmail.com",
+    value: "mytwinklebeads@gmail.com",
   },
 ];
 
