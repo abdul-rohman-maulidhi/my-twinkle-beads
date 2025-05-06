@@ -80,7 +80,7 @@ const navLinks = [
   { label: "Beranda", href: "#" },
   { label: "Koleksi", href: "#products" },
   { label: "Testimoni", href: "#testimonials" },
-  { label: "Galeri", href: "#gallery" },
+  { label: "Galeri", href: "https://www.instagram.com/my.twinkle.beads/" },
   { label: "Kontak", href: "#contact" },
 ];
 
