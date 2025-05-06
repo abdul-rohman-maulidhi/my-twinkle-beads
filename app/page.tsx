@@ -1,103 +1,248 @@
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import ProductSection from '@/components/ProductSection'
+import TestimonialSection from "@/components/TestimonialSection";
+import StepsSection from "@/components/StepsSection";
+// import GallerySection from "@/components/GallerySection";
+import FeatureSection from "@/components/FeatureSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Navbar
+        logo="My Twinkle Beads"
+        links={navLinks}
+        ctaText="Chat via WhatsApp"
+        ctaLink="https://wa.me/6289652877866?text=Halo%20kak!%20Aku%20tertarik%20dengan%20gelang%20dari%20My%20Twinkle%20Beads%20✨"
+      />
+      <HeroSection
+        headline="Gelang Handmade, Penuh Cerita ✨"
+        subheadline="Ciptakan gelang unik dengan warna dan nama pilihanmu. Cocok untuk hadiah atau koleksi pribadi!"
+        image="images/hero.jpg"
+        ctaText="Pesan Sekarang via WhatsApp"
+        ctaLink="https://wa.me/6289652877866?text=Halo%20kak!%20Aku%20tertarik%20dengan%20gelang%20dari%20My%20Twinkle%20Beads%20✨"
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <ProductSection
+        title="Produk Terpopuler di Instagram"
+        subtitle="Lihat produk-produk kami yang paling banyak disukai di Instagram"
+        products={instagramProducts}
+      />
+
+      {/* <ProductGrid
+        title="Koleksi Gelang Kami"
+        subtitle="Semua bisa dikustom sesuai keinginanmu!"
+        products={products}
+      /> */}
+
+      <TestimonialSection
+        title="Apa Kata Mereka?"
+        subtitle="Testimoni dari pelanggan My Twinkle Beads"
+        testimonials={testimonials}
+      />
+
+      <StepsSection
+        title="Cara Pemesanan"
+        subtitle="Ikuti 4 langkah mudah untuk mendapatkan gelang favoritmu"
+        steps={stepsData}
+      />
+
+      {/* <GallerySection
+        title="Galeri Pelanggan"
+        subtitle="Lihat bagaimana gelang My Twinkle Beads menemani harimu"
+        images={galleryImages}
+      /> */}
+
+      <FeatureSection
+        title="Kenapa Memilih Kami?"
+        subtitle="My Twinkle Beads hadir untuk memberikan yang terbaik"
+        features={featureItems}
+      />
+
+      <ContactSection
+        title="Hubungi Kami"
+        subtitle="Siap bantu kamu buat gelang impian"
+        contactInfos={contactInfos}
+        whatsappNumber="6289652877866"
+        waMessage="Halo kak! Aku tertarik dengan gelang dari My Twinkle Beads ✨"
+      />
+
+      <Footer />
+
+    </>
   );
 }
+
+// Navbar
+const navLinks = [
+  { label: "Beranda", href: "#" },
+  { label: "Koleksi", href: "#products" },
+  { label: "Testimoni", href: "#testimonials" },
+  { label: "Galeri", href: "#gallery" },
+  { label: "Kontak", href: "#contact" },
+];
+
+// Product
+// const products = [
+//   {
+//     id: "1",
+//     name: "Gelang Nama Pastel",
+//     price: "Rp25.000",
+//     image: "/images/gelang1.jpg",
+//     waLink: "https://wa.me/6281234567890?text=Halo! Saya mau pesan Gelang Nama Pastel",
+//   },
+//   {
+//     id: "2",
+//     name: "Gelang Couple",
+//     price: "Rp40.000",
+//     image: "/images/gelang2.jpg",
+//     waLink: "https://wa.me/6281234567890?text=Halo! Saya mau pesan Gelang Couple",
+//   },
+//   {
+//     id: "3",
+//     name: "Gelang Custom Warna",
+//     price: "Rp30.000",
+//     image: "/images/gelang3.jpg",
+//     waLink: "https://wa.me/6281234567890?text=Halo! Saya mau pesan Gelang Custom Warna",
+//   },
+// ];
+
+//Product embed
+const instagramProducts = [
+  {
+    id: "1",
+    name: "Luna Charm Couple",
+    sale: "Rp. 40.000/ 2pcs",
+    price: "Rp 20.000/ 2pcs",
+    waLink: "https://wa.me/6289652877866?text=Halo%20Kak!%20Saya%20tertarik%20dengan%20Gelang%20Luna%20Charm%20Couple",
+    instagramPostUrl: "https://www.instagram.com/p/DH7Pi7aT3kr/",
+  },
+  {
+    id: "2",
+    name: "Spider Couple",
+    sale: "Rp. 40.000/ 2pcs",
+    price: "Rp 20.000/ 2pcs",
+    waLink: "https://wa.me/6289652877866?text=Halo%20Kak!%20Saya%20tertarik%20dengan%20Gelang%20Spider%20Couple",
+    instagramPostUrl: "https://www.instagram.com/p/DH7SBIlT1da/",
+  },
+  {
+    id: "3",
+    name: "Shadow Elegance Couple",
+    sale: "Rp. 40.000/ 2pcs",
+    price: "Rp 20.000/ 2pcs",
+    waLink: "https://wa.me/6289652877866?text=Halo%20Kak!%20Saya%20tertarik%20dengan%20Sepatu%20Gelang%20Shadow%20Elegance%20Couple",
+    instagramPostUrl: "https://www.instagram.com/p/DIJWH35p6TT/",
+  },
+];
+
+// Testimoni
+const testimonials = [
+  {
+    name: "Aulia",
+    message: "Gelangnya lucu banget! Warnanya bisa aku pilih sendiri 😍",
+  },
+  {
+    name: "Dinda",
+    message: "Packingnya rapi dan terjamin bagus deh. Suka banget!",
+  },
+  {
+    name: "Sari",
+    message: "Sudah 3x order buat hadiah ulang tahun, selalu puas ✨",
+  },
+];
+
+// Steps
+import {
+  ShoppingCart,
+  MessageCircle,
+  Palette,
+  PackageCheck,
+} from "lucide-react";
+
+const stepsData = [
+  {
+    icon: <ShoppingCart className="w-6 h-6" />,
+    title: "Pilih Gelang",
+    description: "Lihat koleksi gelang dan pilih yang kamu suka.",
+  },
+  {
+    icon: <MessageCircle className="w-6 h-6" />,
+    title: "Hubungi Kami",
+    description: "Klik tombol WhatsApp untuk memesan langsung.",
+  },
+  {
+    icon: <Palette className="w-6 h-6" />,
+    title: "Kustom Desain",
+    description: "Pilih warna, nama, dan detail desain gelangmu.",
+  },
+  {
+    icon: <PackageCheck className="w-6 h-6" />,
+    title: "Kirim & Nikmati",
+    description: "Gelang akan kami kirim dengan cepat dan aman.",
+  },
+];
+
+// Gallery
+// const galleryImages = [
+//   "/images/gallery1.jpg",
+//   "/images/gallery2.jpg",
+//   "/images/gallery3.jpg",
+//   "/images/gallery4.jpg",
+//   "/images/gallery5.jpg",
+//   "/images/gallery6.jpg",
+// ];
+
+// Feature
+import {
+  Sparkles,
+  Gift,
+  HandHeart,
+  ShieldCheck,
+} from "lucide-react";
+
+const featureItems = [
+  {
+    icon: <Sparkles className="w-6 h-6" />,
+    title: "Unik & Custom",
+    description: "Setiap gelang dibuat sesuai dengan selera dan keinginanmu.",
+  },
+  {
+    icon: <Gift className="w-6 h-6" />,
+    title: "Cocok untuk Hadiah",
+    description: "Pilihan sempurna untuk ulang tahun, sahabat, atau pasangan.",
+  },
+  {
+    icon: <HandHeart className="w-6 h-6" />,
+    title: "Buatan Tangan",
+    description: "Dirangkai manual dengan penuh cinta oleh perajin lokal.",
+  },
+  {
+    icon: <ShieldCheck className="w-6 h-6" />,
+    title: "Aman & Terpercaya",
+    description: "Transaksi mudah melalui WhatsApp dan kualitas terjamin.",
+  },
+];
+
+// Contact 
+import { Phone, Mail, MapPin } from "lucide-react";
+
+const contactInfos = [
+  {
+    icon: <MapPin />,
+    label: "Alamat",
+    value: "Bangkalan, Jawa Timur",
+  },
+  {
+    icon: <Phone />,
+    label: "WhatsApp",
+    value: "+62 896-5287-7866",
+  },
+  {
+    icon: <Mail />,
+    label: "Email",
+    value: "twinklebeads@gmail.com",
+  },
+];
+
