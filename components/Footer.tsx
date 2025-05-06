@@ -15,13 +15,13 @@ const Footer: React.FC<FooterProps> = ({
   brandName = "My Twinkle Beads",
   description = "Toko gelang handmade custom dengan sentuhan cinta dan kreativitas.",
   navLinks = [
-    { label: "Beranda", href: "#home" },
+    { label: "Beranda", href: "#" },
     { label: "Koleksi", href: "#products" },
     { label: "Keunggulan", href: "#features" },
     { label: "Cara Pesan", href: "#steps" },
     { label: "Kontak", href: "#contact" },
   ],
-  instagramUrl = "https://instagram.com/mytwinklebeads",
+  instagramUrl = "https://www.instagram.com/my.twinkle.beads/",
 }) => {
   return (
     <footer className="bg-purple-800 text-white py-10">
