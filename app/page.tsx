@@ -8,6 +8,9 @@ import FeatureSection from "@/components/FeatureSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
+import PaymentSection from "@/components/PaymentSection";
+import MapsSection from "@/components/MapsSection";
+
 export default function Home() {
   return (
     <>
@@ -48,6 +51,10 @@ export default function Home() {
         subtitle="Ikuti 4 langkah mudah untuk mendapatkan gelang favoritmu"
         steps={stepsData}
       />
+
+      <PaymentSection/>
+
+      <MapsSection/>
 
       {/* <GallerySection
         title="Galeri Pelanggan"
@@ -141,15 +148,15 @@ const instagramProducts = [
 const testimonials = [
   {
     name: "Aulia",
-    message: "Gelangnya lucu banget! Warnanya bisa aku pilih sendiri 😍",
+    message: "Gelangnya lucu banget! Warnanya dan desainnya bisa aku pilih sendiri! 😍",
   },
   {
     name: "Dinda",
-    message: "Packingnya rapi dan terjamin bagus deh. Suka banget!",
+    message: "Packingnya rapi dan terjamin bagus deh. Suka banget!😘",
   },
   {
     name: "Sari",
-    message: "Sudah 3x order buat hadiah ulang tahun, selalu puas ✨",
+    message: "Bahannya juga bagus, Nyaman dipake, gabikin tangan alergi!❤️",
   },
 ];
 
@@ -179,8 +186,8 @@ const stepsData = [
   },
   {
     icon: <PackageCheck className="w-6 h-6" />,
-    title: "Kirim & Nikmati",
-    description: "Gelang akan kami kirim dengan cepat dan aman.",
+    title: "Ambil Pesanan",
+    description: "Setelah admin mengkonfirmasi pesananmu telah selesai silahkan ambil pesananmu.",
   },
 ];
 

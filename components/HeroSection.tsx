@@ -31,13 +31,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               {subheadline}
             </p>
 
-            <Button
-              variant="fill"
-              onClick={() => window.open(ctaLink, "_blank")}
-              className="text-base px-8 py-3"
-            >
-              {ctaText}
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <Button
+                variant="fill"
+                onClick={() => window.open(ctaLink, "_blank")}
+                className="text-base px-8 py-3"
+              >
+                {ctaText}
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() =>
+                  document
+                    .getElementById("steps")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="text-base px-8 py-3"
+              >
+                Cara Pesan
+              </Button>
+            </div>
           </div>
 
           {/* Image */}
