@@ -114,7 +114,7 @@ const instagramProducts = [
   {
     id: "1",
     name: "Luna Charm Couple",
-    sale: "Rp. 40.000/ 2pcs",
+    sale: "Rp. 30.000/ 2pcs",
     price: "Rp 20.000/ 2pcs",
     waLink: "https://wa.me/6289652877866?text=Halo%20Kak!%20Saya%20tertarik%20dengan%20Gelang%20Luna%20Charm%20Couple",
     instagramPostUrl: "https://www.instagram.com/p/DH7Pi7aT3kr/",
@@ -122,7 +122,7 @@ const instagramProducts = [
   {
     id: "2",
     name: "Spider Couple",
-    sale: "Rp. 40.000/ 2pcs",
+    sale: "Rp. 30.000/ 2pcs",
     price: "Rp 20.000/ 2pcs",
     waLink: "https://wa.me/6289652877866?text=Halo%20Kak!%20Saya%20tertarik%20dengan%20Gelang%20Spider%20Couple",
     instagramPostUrl: "https://www.instagram.com/p/DH7SBIlT1da/",
@@ -130,7 +130,7 @@ const instagramProducts = [
   {
     id: "3",
     name: "Shadow Elegance Couple",
-    sale: "Rp. 40.000/ 2pcs",
+    sale: "Rp. 30.000/ 2pcs",
     price: "Rp 20.000/ 2pcs",
     waLink: "https://wa.me/6289652877866?text=Halo%20Kak!%20Saya%20tertarik%20dengan%20Sepatu%20Gelang%20Shadow%20Elegance%20Couple",
     instagramPostUrl: "https://www.instagram.com/p/DIJWH35p6TT/",
